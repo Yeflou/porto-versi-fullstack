@@ -5,23 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fullstack Developer Portfolio</title>
-    <!-- Google Fonts for premium typography -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- FontAwesome for icons -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Stylesheet -->
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
 
-    <!-- Navigation Header -->
     <header class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
@@ -46,11 +44,9 @@
         </div>
     </header>
 
-    <!-- Combined Hero & About Section -->
     <section id="about" class="section hero-about-section">
         <div class="container hero-about-grid">
 
-            <!-- Left Info Pane -->
             <div class="hero-content">
                 <span class="badge">Mahasiswa Informatika / Fullstack Developer</span>
                 <h1 class="hero-title">Halo, Saya <span class="text-highlight">Amelia Flora Aprilianingrum</span></h1>
@@ -72,31 +68,24 @@
 
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">Lihat Proyek <i class="fa-solid fa-laptop-code"></i></a>
-                    <!-- Untuk mengaktifkan file CV Anda, masukkan path PDF Anda pada attribute href di bawah ini -->
+                    
                     <a href="#" class="btn btn-secondary" download="CV_Amelia_Flora.pdf">Unduh CV <i
                             class="fa-solid fa-file-arrow-down"></i></a>
                     <a href="#contact" class="btn btn-outline">Hubungi Saya <i class="fa-regular fa-envelope"></i></a>
                 </div>
 
-
             </div>
 
-            <!-- Right Photo Placeholder Pane -->
             <div class="hero-photo-container">
-                <!-- 
-                    PENTING:
-                    Untuk mengganti foto Anda nanti, cukup hapus class "photo-placeholder" 
-                    dan ubah tag di bawah menjadi: 
-                    <img src="path_ke_foto_anda.jpg" alt="Amelia Flora Aprilianingrum" class="profile-photo">
-                -->
+                
                 <div class="profile-photo-wrapper photo-placeholder" id="photoFrame">
                     <div class="placeholder-icon">
                         <i class="fa-regular fa-image"></i>
                     </div>
                     <div class="placeholder-text">
-                        <h3>Template Foto 1:1</h3>
+                        <h3>Template Foto 3:4</h3>
                         <p>Klik di sini untuk mensimulasikan unggahan foto, atau ganti file gambar di kode sumber.</p>
-                        <span class="placeholder-dimensions">Rekomendasi: 500x500 px</span>
+                        <span class="placeholder-dimensions">Rekomendasi: 600x800 px (3:4)</span>
                     </div>
                     <input type="file" id="photoInput" accept="image/*" style="display: none;">
                 </div>
@@ -105,7 +94,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-header">
@@ -114,7 +102,6 @@
                 <div class="section-line"></div>
             </div>
 
-            <!-- Filter Buttons -->
             <div class="project-filters">
                 <button class="filter-btn active" data-filter="all">Semua</button>
                 <button class="filter-btn" data-filter="fullstack">Fullstack</button>
@@ -122,10 +109,8 @@
                 <button class="filter-btn" data-filter="backend">Backend</button>
             </div>
 
-            <!-- Projects Grid -->
             <div class="projects-grid">
 
-                <!-- Project Card 1: Fullstack -->
                 <div class="project-card" data-category="fullstack">
                     <div class="project-img-placeholder">
                         <i class="fa-solid fa-laptop-code"></i>
@@ -152,7 +137,6 @@
                     </div>
                 </div>
 
-                <!-- Project Card 2: Frontend -->
                 <div class="project-card" data-category="frontend">
                     <div class="project-img-placeholder">
                         <i class="fa-solid fa-chart-line"></i>
@@ -178,7 +162,6 @@
                     </div>
                 </div>
 
-                <!-- Project Card 3: Backend -->
                 <div class="project-card" data-category="backend">
                     <div class="project-img-placeholder">
                         <i class="fa-solid fa-shield-halved"></i>
@@ -204,7 +187,6 @@
                     </div>
                 </div>
 
-                <!-- Project Card 4: Fullstack -->
                 <div class="project-card" data-category="fullstack">
                     <div class="project-img-placeholder">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -235,7 +217,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="section skills-section">
         <div class="container">
             <div class="section-header">
@@ -246,7 +227,6 @@
 
             <div class="skills-grid">
 
-                <!-- Category 1: Frontend -->
                 <div class="skills-card">
                     <div class="skills-card-header">
                         <i class="fa-solid fa-code"></i>
@@ -283,7 +263,6 @@
                     </div>
                 </div>
 
-                <!-- Category 2: Backend -->
                 <div class="skills-card">
                     <div class="skills-card-header">
                         <i class="fa-solid fa-server"></i>
@@ -320,7 +299,6 @@
                     </div>
                 </div>
 
-                <!-- Category 3: DevOps & Tools -->
                 <div class="skills-card">
                     <div class="skills-card-header">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -361,7 +339,6 @@
         </div>
     </section>
 
-    <!-- Creative Design & UI/UX Section -->
     <section id="creative" class="section creative-section">
         <div class="container">
             <div class="section-header">
@@ -371,7 +348,7 @@
             </div>
 
             <div class="creative-grid">
-                <!-- Card 1: UI/UX Design -->
+                
                 <div class="creative-card">
                     <div class="creative-icon">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -379,13 +356,12 @@
                     <h3>UI/UX Design</h3>
                     <p>Perancangan antarmuka pengguna (UI) dan pengalaman pengguna (UX) yang berfokus pada riset
                         pengguna, wireframing, prototyping di Figma, serta desain yang interaktif dan intuitif.</p>
-                    <!-- Masukkan tautan portofolio UI/UX Anda pada atribut href di bawah -->
+                    
                     <a href="https://www.figma.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                         Lihat Portofolio UI/UX <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
 
-                <!-- Card 2: Graphic Design -->
                 <div class="creative-card">
                     <div class="creative-icon">
                         <i class="fa-solid fa-palette"></i>
@@ -394,7 +370,7 @@
                     <p>Karya desain grafis kreatif meliputi identitas visual (branding), ilustrasi digital, desain
                         poster/feed media sosial, dan pembuatan aset menggunakan Adobe Illustrator, Photoshop, atau
                         Canva.</p>
-                    <!-- Masukkan tautan portofolio Desain Grafis Anda pada atribut href di bawah -->
+                    
                     <a href="https://www.behance.net" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                         Lihat Desain Grafis <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
@@ -403,7 +379,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
@@ -413,7 +388,7 @@
             </div>
 
             <div class="contact-grid-3col">
-                <!-- Column 1: Logo & Tagline -->
+                
                 <div class="contact-col brand-col">
                     <a href="#" class="nav-logo footer-logo">
                         <span class="logo-accent">&lt;</span>FS<span class="logo-accent">.Dev /&gt;</span>
@@ -421,7 +396,6 @@
                     <p class="brand-tagline">Mahasiswa Informatika &amp; Fullstack Developer</p>
                 </div>
 
-                <!-- Column 2: Contact Info -->
                 <div class="contact-col info-col">
                     <h3 class="col-title">Hubungi saya</h3>
 
@@ -448,7 +422,6 @@
                     </div>
                 </div>
 
-                <!-- Column 3: Professional Links -->
                 <div class="contact-col professional-col">
                     <h3 class="col-title">Professional</h3>
 
@@ -480,7 +453,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <p class="copyright">&copy; 2026 Amelia Flora Aprilianingrum. Hak Cipta Dilindungi.</p>
@@ -490,7 +462,6 @@
         </div>
     </footer>
 
-    <!-- Script File -->
     <script src="script.js"></script>
 </body>
 
