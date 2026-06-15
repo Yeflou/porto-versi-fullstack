@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack Developer Portfolio</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">&lt;</span>FS<span class="logo-accent">.Dev /&gt;</span>
+            </a>
+
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link active">Tentang Saya</a></li>
+                    <li><a href="#projects" class="nav-link">Proyek</a></li>
+                    <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                    <li><a href="#creative" class="nav-link">Desain & UI/UX</a></li>
+                    <li><a href="#contact" class="nav-link">Hubungi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Combined Hero & About Section -->
+    <section id="about" class="section hero-about-section">
+        <div class="container hero-about-grid">
+
+            <!-- Left Info Pane -->
+            <div class="hero-content">
+                <span class="badge">Mahasiswa Informatika / Fullstack Developer</span>
+                <h1 class="hero-title">Halo, Saya <span class="text-highlight">Amelia Flora Aprilianingrum</span></h1>
+                <h2 class="hero-subtitle">Mahasiswa Informatika Semester 6 & Fullstack Developer</h2>
+
+                <div class="about-description">
+                    <p>
+                        Saya adalah seorang mahasiswi program studi <strong>Teknik Informatika semester 6</strong> yang
+                        memiliki ketertarikan mendalam pada pengembangan aplikasi web. Saya aktif mempelajari konsep
+                        frontend dan backend, serta senang membangun sistem yang mengintegrasikan keduanya secara
+                        fungsional.
+                    </p>
+                    <p>
+                        Dengan bekal mata kuliah pemrograman, proyek perkuliahan, dan antusiasme tinggi untuk
+                        mengeksplorasi teknologi baru, saya siap berkolaborasi dalam merancang solusi digital yang
+                        bersih, terstruktur, dan siap pakai.
+                    </p>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Lihat Proyek <i class="fa-solid fa-laptop-code"></i></a>
+                    <!-- Untuk mengaktifkan file CV Anda, masukkan path PDF Anda pada attribute href di bawah ini -->
+                    <a href="#" class="btn btn-secondary" download="CV_Amelia_Flora.pdf">Unduh CV <i
+                            class="fa-solid fa-file-arrow-down"></i></a>
+                    <a href="#contact" class="btn btn-outline">Hubungi Saya <i class="fa-regular fa-envelope"></i></a>
+                </div>
+
+
+            </div>
+
+            <!-- Right Photo Placeholder Pane -->
+            <div class="hero-photo-container">
+                <!-- 
+                    PENTING:
+                    Untuk mengganti foto Anda nanti, cukup hapus class "photo-placeholder" 
+                    dan ubah tag di bawah menjadi: 
+                    <img src="path_ke_foto_anda.jpg" alt="Amelia Flora Aprilianingrum" class="profile-photo">
+                -->
+                <div class="profile-photo-wrapper photo-placeholder" id="photoFrame">
+                    <div class="placeholder-icon">
+                        <i class="fa-regular fa-image"></i>
+                    </div>
+                    <div class="placeholder-text">
+                        <h3>Template Foto 1:1</h3>
+                        <p>Klik di sini untuk mensimulasikan unggahan foto, atau ganti file gambar di kode sumber.</p>
+                        <span class="placeholder-dimensions">Rekomendasi: 500x500 px</span>
+                    </div>
+                    <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Karya Terbaru</span>
+                <h2 class="section-title">Proyek Pilihan</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+
+                <!-- Project Card 1: Fullstack -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span>EcoSphere SaaS</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Fullstack Application</span>
+                        <h3 class="project-title">EcoSphere - Kolaborasi Manajemen Proyek</h3>
+                        <p class="project-desc">Aplikasi SaaS kolaborasi untuk tim proyek hijau. Dilengkapi fitur
+                            manajemen tugas real-time, obrolan kelompok, dan pelacakan jejak karbon terintegrasi.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
+                                    class="fa-brands fa-github"></i> Kode</a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Frontend -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>FinTrack Analytics</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Frontend Application</span>
+                        <h3 class="project-title">FinTrack - Visualisasi Keuangan Pribadi</h3>
+                        <p class="project-desc">Dashboard keuangan interaktif yang menyajikan laporan pengeluaran
+                            bulanan, prediksi arus kas, dan analisis visual dengan grafik responsif.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Vite</span>
+                            <span>Chart.js</span>
+                            <span>TailwindCSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
+                                    class="fa-brands fa-github"></i> Kode</a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Backend -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>AuthShield OAuth2</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Backend Service</span>
+                        <h3 class="project-title">AuthShield - Server OAuth2 & JWT Terdistribusi</h3>
+                        <p class="project-desc">Layanan otentikasi mandiri berkinerja tinggi berbasis OAuth2. Mampu
+                            menangani ribuan permintaan sesi per detik dengan latensi minimal.</p>
+                        <div class="project-tech">
+                            <span>Go (Golang)</span>
+                            <span>Redis</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
+                                    class="fa-brands fa-github"></i> Kode</a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Dokumentasi API</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: Fullstack -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>DepotKu E-Commerce</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Fullstack Application</span>
+                        <h3 class="project-title">DepotKu - Platform B2B Grosir UMKM</h3>
+                        <p class="project-desc">Portal e-commerce khusus untuk transaksi grosir antar pelaku UMKM.
+                            Terintegrasi dengan multi-ekspedisi dan gateway pembayaran otomatis.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>GraphQL</span>
+                            <span>Prisma</span>
+                            <span>PostgreSQL</span>
+                            <span>Midtrans</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
+                                    class="fa-brands fa-github"></i> Kode</a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Kemampuan Teknis</span>
+                <h2 class="section-title">Keahlian Saya</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="skills-grid">
+
+                <!-- Category 1: Frontend -->
+                <div class="skills-card">
+                    <div class="skills-card-header">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Frontend Web</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 / CSS3 / JavaScript</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React.js / Next.js</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Vue.js / Nuxt.js</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Backend -->
+                <div class="skills-card">
+                    <div class="skills-card-header">
+                        <i class="fa-solid fa-server"></i>
+                        <h3>Backend Web</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js (Express / NestJS)</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Go (Golang)</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL / MySQL / MongoDB</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: DevOps & Tools -->
+                <div class="skills-card">
+                    <div class="skills-card-header">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>DevOps & Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker / Containerization</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub Actions CI-CD</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">AWS / VPS Hosting</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Design & UI/UX Section -->
+    <section id="creative" class="section creative-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Eksplorasi Kreatif</span>
+                <h2 class="section-title">Portofolio Desain & UI/UX</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="creative-grid">
+                <!-- Card 1: UI/UX Design -->
+                <div class="creative-card">
+                    <div class="creative-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Perancangan antarmuka pengguna (UI) dan pengalaman pengguna (UX) yang berfokus pada riset
+                        pengguna, wireframing, prototyping di Figma, serta desain yang interaktif dan intuitif.</p>
+                    <!-- Masukkan tautan portofolio UI/UX Anda pada atribut href di bawah -->
+                    <a href="https://www.figma.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                        Lihat Portofolio UI/UX <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: Graphic Design -->
+                <div class="creative-card">
+                    <div class="creative-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Karya desain grafis kreatif meliputi identitas visual (branding), ilustrasi digital, desain
+                        poster/feed media sosial, dan pembuatan aset menggunakan Adobe Illustrator, Photoshop, atau
+                        Canva.</p>
+                    <!-- Masukkan tautan portofolio Desain Grafis Anda pada atribut href di bawah -->
+                    <a href="https://www.behance.net" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                        Lihat Desain Grafis <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Hubungi</span>
+                <h2 class="section-title">Hubungi Saya</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid-3col">
+                <!-- Column 1: Logo & Tagline -->
+                <div class="contact-col brand-col">
+                    <a href="#" class="nav-logo footer-logo">
+                        <span class="logo-accent">&lt;</span>FS<span class="logo-accent">.Dev /&gt;</span>
+                    </a>
+                    <p class="brand-tagline">Mahasiswa Informatika &amp; Fullstack Developer</p>
+                </div>
+
+                <!-- Column 2: Contact Info -->
+                <div class="contact-col info-col">
+                    <h3 class="col-title">Hubungi saya</h3>
+
+                    <div class="contact-item">
+                        <span class="item-label">Alamat</span>
+                        <span class="item-value">Surakarta, Jawa Tengah</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="item-label">LinkedIn</span>
+                        <span class="item-value">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="underlined-link">
+                                Hubungi Saya
+                            </a>
+                            <span class="linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></span>
+                        </span>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="item-label">Email</span>
+                        <span class="item-value">
+                            <a href="mailto:amelflora06@gmail.com" class="underlined-link">amelflora06@gmail.com</a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Column 3: Professional Links -->
+                <div class="contact-col professional-col">
+                    <h3 class="col-title">Professional</h3>
+
+                    <div class="contact-item">
+                        <span class="item-label">Website</span>
+                        <span class="item-value">
+                            <a href="#" class="underlined-link">https://ameliaflora.my.id/</a>
+                        </span>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="item-label">GitHub</span>
+                        <span class="item-value">
+                            <a href="https://github.com" target="_blank" rel="noopener"
+                                class="underlined-link">https://github.com/ameliaflora</a>
+                        </span>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="item-label">Download</span>
+                        <span class="item-value">
+                            <a href="#" download="CV_Amelia_Flora.pdf" class="cv-download-link">
+                                <i class="fa-solid fa-star star-icon"></i> My Professional CV
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Amelia Flora Aprilianingrum. Hak Cipta Dilindungi.</p>
+            <button id="backToTop" class="back-to-top" aria-label="Kembali ke Atas">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
