@@ -19,18 +19,18 @@ jobs:
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H 147.93.159.42 >> ~/.ssh/known_hosts 2>/dev/null
 
       - name: Rsync static site to server
         run: |
           rsync -az --delete \
             --exclude='.git' --exclude='.github' \
-            -e "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes" \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
             ./ deploy@147.93.159.42:porto/html/
 
       - name: Reload nginx (pick up new files)
         run: |
-          ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes deploy@147.93.159.42 \
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no deploy@147.93.159.42 \
             'docker exec porto nginx -s reload || true'
